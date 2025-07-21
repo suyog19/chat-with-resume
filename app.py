@@ -2,7 +2,9 @@ from dotenv import load_dotenv
 import os
 from openai import OpenAI
 import gradio as gr
-from agents import Agent, Runner, trace
+from agents import Agent, Runner, trace, function_tool
+import sendgrid
+from sendgrid.helpers.mail import Mail, Email, To, Content
 
 def load_dotenv_file():
     load_dotenv(override=True)
@@ -36,21 +38,37 @@ def create_chat_history(history):
         chat_history += f"{role}: {content}\n"
     return chat_history.strip()
 
+@function_tool
+def send_email(sub: str, body: str):
+    sg = sendgrid.SendGridAPIClient(api_key=os.getenv('SENDGRID_API_KEY'))
+    from_email = Email("contact@suyogjoshi.com")
+    to_email = To("suyog19@gmail.com")
+    subject = sub
+    content = Content("text/plain", body)
+    mail = Mail(from_email, to_email, subject, content)
+    
+    try:
+        response = sg.send(mail)
+        print(f"Email sent successfully! Status code: {response.status_code}")
+    except Exception as e:
+        print(f"An error occurred while sending the email: {e}")
+    
+    return {"status": "success"}
+
+
 async def chat(message, history=[]):
-   
+    tools = [send_email]
     agent = Agent(
         name="Resume Chat Agent",
         model="gpt-4.1-mini",
         instructions=system_instructions+ "\n\n" + cv + create_chat_history(history),
+        tools=tools
     )
     print("history:", history)
     result = await Runner.run(agent, message)
     print("\n\nFinal Output:")
     print(result.final_output)
     return result.final_output
-
-
-
 
 if __name__ == "__main__":
     load_dotenv_file()
