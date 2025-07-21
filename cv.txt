@@ -1,3 +1,112 @@
-My name is suyog joshi. I am a software engineer with 21 years of industry experience in software product development.
-I stay in Pune.
-I currently work for Mastercard.
+Name: Suyog Joshi
+
+Career Summary:
+1) Software engineer with 21 years of experience in product companies, developing market leading
+software in payment and banking domains.
+2) Led team of up to 20 software engineers to deliver expected outcome
+3) Expertise in software architecture and development of REST microservices on Java tech stack
+4) Able to communicate well among stakeholders and keep the team motivated
+5)Works with passion, transparency and leading by example
+
+Work Experience:
+Currently working as Consulting Practice Manager at Oracle Financial Services Software Ltd 
+since 17-July-2025. 
+
+Earlier, worked at Mastercard as Principal Software Engineer from 2024 till April 2025. 
+In this role, primarily delivered following:
+1) Architected a solution to automate the customer onboarding process to improve efficiency and
+customer experience. Used Event Driven Architecture for this purpose.
+2) Contributed to re-architecting of cross border services platform from monolithic to micro-services
+architecture.
+
+Prior to this role, worked at Mastercard as Director, Software Engineering 
+from March 2022 to May 2024. In this role, delivered following 
+1) Acted as subject matter expert (SME) for the Cross Border Services APIs stack
+2) Build a team of engineers to take handover and ownership of customer onboarding solution from a
+vendor. This involved upskilling myself and the team on new technologies such as Python and Odoo.
+Successful completion of this project helped Mastercard to significantly reduce costs and vendor risks.
+3) Recruited two managers and 10+ team members to lead three squads (20~ members) to deliver
+product enhancements.
+
+Prior to this role, worked at Mastercard as Manager, Software Engineering from 
+May 2018 to March 2022. In this role, mainly delivered following:
+1) Led two Agile teams to deliver new features and enhancements to the Cross Border Services APIs and
+customer care portal
+2) Tech stack included Java, Spring, Spring boot, Hibernate, Pivotal Cloud Foundry (PCF)
+3) Regularly involved in hiring right talent for the team and company
+
+Before this, worked at Oracle Financial Services Software Ltd (abbreviated as OFSS) as Senior Manager, Software Engineering 
+from January 2015 till May 2018. In this role, mainly delivered following: 
+1) Led a team of about 10 developers to rearchitect, develop and deliver Trade Finance module of the
+Oracle Banking Digital Experience product. This included various capabilities offered to corporate
+customers such as Letter of Credit (LC) and Bank Guarantee (BG)
+2) Hired and maintained team strength of about two agile teams in Pune office and led this unit to deliver
+various product releases
+
+Before this role, worked at OFSS as Manager, Software Engineering from 
+January 2012 to January 2015. In this role, primarily delivered following:
+1) FLEXCUBE Direct Banking was newly introducing mobile banking capabilities. I led a team of about 12
+people to develop and deliver mobile banking solution across Android, iOS, Blackberry, Symbian
+2) Recruited team having C# expertise, upskilled some folks on Android and delivered the solution within
+given timeframe.
+
+Before this, worked at OFSS as a Lead Software Engineer from January 2010 till January 2012. 
+In this role, mainly delivered following:
+1) Led a team of about 6 people to develop various channel banking solutions as part of FLEXCUBE Direct
+Banking product
+2) This includes solutions related to retail banking, corporate banking, personal finance etc.
+
+Before this role, worked at OFSS in various roles such as Associate Engineer, Engineer and Senior Engineer between 
+February 2005 and January 2010. Important deliverables in these roles can be summarized as: 
+1) Developed Mutual Funds module of FLEXCUBE Direct Banking (FCDB) using Java, J2EE stack
+2) Implemented this module at HDFC Bank and it is still a part of its Internet Banking
+3) Did various implementations of FCDB at HDFC Bank including the first implementation of RTGS funds
+transfer module at HDFC Bank
+4) Single handedly Implemented FCDB product in Banco Espirito Santo (BES), Lisbon, Portugal.
+
+And prior to this role, in first professional experience, worked at Advanced Data Systems Pvt Ltd 
+as a Associate Engineer from January 2004 – February 2005. In this role, mainly worked on 
+development and implementation of Loan Tracking System at HSBC Bank, Mumbai 
+using Java, JSP, Servlets.
+
+Technical skills and Abilities:
+1) Software Architecture, Design Patterns
+2) Software Resiliency, high availability, performance, logging, alerts and monitoring
+3) Java, J2EE tech stack
+4) Exposure to Spring, Springboot, Hibernate
+5) REST API development, adherence to gold standards
+6) Database – Oracle, Postgres, MS SQL
+7) Software Quality Assurance
+8) CI/CD – Git, Maven, Jenkins, Docker, Kubernetes, Helm charts
+9) Exposure to cloud tech – Pivotal Cloud Foundry (PCF)
+10) Software security – Checkmarx, Sonarqube, Blackduck
+
+Other skills and experience:
+1) Leadership in software engineering
+2) People Management
+3) Project Management using ALM Rally, JIRA
+4) Agile Scrum, SAFe frameworks
+
+Educational Details:
+Completed graduation in Bachelor of Engineering in Computer Engineering from Shivajirao S 
+Jondhale College of Engineering, which is affiliated to Mumbai University. Did this 
+engineering from June 1999 to June 2003. Scored First Class with 65.03% of marks.
+
+Before that, did HSC i.e. Higher Secondary from Tilaknagar Vidyamandir, Dombivli 
+affiliated with Maharashtra State Board of Secondary and Higher Secondary Education. Did 
+this HSC from yeat 1997 till year 1999 and scored a Distinction with 84.17% marks.
+
+Before that, did SSC from Swami Vivekanand Vidyamandir, Dombivli affiliated with 
+Maharashtra State Board of Secondary and Higher Secondary Education. Passed SSC in the year 
+1997 with a distinction and 80.66% marks.
+
+Hobbies:
+My hobbies include home gardening, reading, outing etc.
+
+Currently learning MERN stack, which is a modern stack for web based application 
+development.
+Also, enrolled for a Post Graduate Diploma in Artificial Intillegence and Data Science.
+This is a 18 month part time course offered by the Indian Institute of 
+Technology (IIT) Bombay.
+
+LinkedIn profile: https://www.linkedin.com/in/suyog-joshi/
