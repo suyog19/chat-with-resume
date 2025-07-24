@@ -5,6 +5,7 @@ import gradio as gr
 from agents import Agent, Runner, trace, function_tool
 import sendgrid
 from sendgrid.helpers.mail import Mail, Email, To, Content
+import requests
 
 def load_dotenv_file():
     load_dotenv(override=True)
@@ -75,9 +76,26 @@ def send_email(sub: str, body: str):
     
     return {"status": "success"}
 
+@function_tool
+def send_push_notification(message: str):
+    '''Send a push notification using Pushover.'''
+    pushover_user = os.getenv("PUSHOVER_USER")
+    pushover_token = os.getenv("PUSHOVER_TOKEN")
+    pushover_url = "https://api.pushover.net/1/messages.json"
+    print(f"Pushing message: {message}")
+    payload = {
+        "user": pushover_user,
+        "token": pushover_token,
+        "message": message
+    }
+    response = requests.post(pushover_url, data=payload)
+    if response.status_code == 200:
+        print("Message sent successfully.")
+    else:
+        print(f"Failed to send message. Status code: {response.status_code}, Response: {response.text}")
 
 async def chat(message, history=[]):
-    tools = [send_email]
+    tools = [send_email, send_push_notification]
     agent = Agent(
         name="Resume Chat Agent",
         model="gpt-4.1-mini",
@@ -95,13 +113,6 @@ if __name__ == "__main__":
     load_resume_data()
     gr.ChatInterface(
         fn=chat,
-        title="Resume Chat Agent",
-        description="Chat with the Resume Chat Agent. Ask questions about the CV or the agent's instructions.",
-        examples=[
-            ["What is your name?"],
-            ["Tell me about your experience."], 
-            ["What are your skills?"],
-            ["What is your education background?"],
-            ["What are your hobbies?"]
-        ]
+        title="Chat with My Resume",
+        description="This is AI powered chat agent. It has information about my Resume and can converse with you regarding the same."
     ).launch(share=True)
