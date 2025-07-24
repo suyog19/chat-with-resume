@@ -24,18 +24,37 @@ def load_resume_data():
     ##############################################################################
     cv = read_text_file("cv.txt")
     system_instructions = read_text_file("instructions.txt")
-    print("CV Content:")
-    print(cv)
+    #print("CV Content:")
+    #print(cv)
 
-    print("\nSystem Instructions:")
-    print(system_instructions)
+    #print("\nSystem Instructions:")
+    #print(system_instructions)
 
 
 def create_chat_history(history):
     '''Iterate over the history and convert it to a string format for the chat agent.'''
+    #print(history)
     chat_history = ""
-    for i, (role, content) in enumerate(history):
-        chat_history += f"{role}: {content}\n"
+    for i, (question, answer) in enumerate(history):
+        if i > 0:
+            chat_history += ""
+        else:
+            chat_history += "[\n"
+        chat_history += "{"
+        chat_history += f"\"role\": \"user\", "
+        chat_history += f"\"content\": \"{question}\""
+        chat_history += "}, "
+
+        chat_history += "{"
+        chat_history += f"\"role\": \"assistant\", "
+        chat_history += f"\"content\": \"{answer}\""
+        chat_history += "}\n"
+        if i == len(history) - 1:
+            chat_history += "]"
+        else:
+            chat_history += ","
+    
+    #print("Returning Chat History:"+chat_history.strip())
     return chat_history.strip()
 
 @function_tool
@@ -49,9 +68,10 @@ def send_email(sub: str, body: str):
     
     try:
         response = sg.send(mail)
-        print(f"Email sent successfully! Status code: {response.status_code}")
+        #print(f"Email sent successfully! Status code: {response.status_code}")
     except Exception as e:
-        print(f"An error occurred while sending the email: {e}")
+        #print(f"An error occurred while sending the email: {e}")
+        pass
     
     return {"status": "success"}
 
@@ -64,10 +84,10 @@ async def chat(message, history=[]):
         instructions=system_instructions+ "\n\n" + cv + create_chat_history(history),
         tools=tools
     )
-    print("history:", history)
+    #print("history:", history)
     result = await Runner.run(agent, message)
-    print("\n\nFinal Output:")
-    print(result.final_output)
+    #print("\n\nFinal Output:")
+    #print(result.final_output)
     return result.final_output
 
 if __name__ == "__main__":
